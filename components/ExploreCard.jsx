@@ -2,7 +2,7 @@
 
 import { motion } from "framer-motion";
 import styles from "../styles";
-import { fadeIn } from "../utils/motion";
+import { fadeIn, zoomIn } from "../utils/motion";
 
 const ExploreCard = ({ id, imgUrl, title, index, active, handleClick }) => (
   <motion.div
@@ -24,8 +24,16 @@ const ExploreCard = ({ id, imgUrl, title, index, active, handleClick }) => (
         {title}
       </h3>
     ) : (
-      <div className="absolute flex lg:flex-col lg:justify-start items-center lg:items-start bottom-0 p-8 w-full bg-[rgba(0,0,0,0.5)]">
+      <motion.div
+        variants={zoomIn(0.5, 1)}
+        initial="hidden"
+        whileInView="show"
+        className="absolute flex lg:flex-col lg:justify-start items-center lg:items-start bottom-0 p-8 w-full bg-[rgba(0,0,0,0.5)]"
+      >
         <div
+          // variants={zoomIn(1, 0.5)}
+          // initial="hidden"
+          // whileInView="show"
           className={`${styles.flexCenter} w-[60px] lg:h-[60px] h-[50px] rounded-3xl glassmorphism lg:mb-4`}
         >
           <img
@@ -42,7 +50,7 @@ const ExploreCard = ({ id, imgUrl, title, index, active, handleClick }) => (
             {title}
           </h2>
         </div>
-      </div>
+      </motion.div>
     )}
   </motion.div>
 );
