@@ -10,6 +10,43 @@
   scroll-behavior: smooth;
 }
 
+/* Menyembunyikan thumb scrollbar */
+::-webkit-scrollbar {
+  width: 0.6em;
+  background-color: #c7c7c7;
+}
+
+/* Menyembunyikan track scrollbar */
+::-webkit-scrollbar-track {
+  -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0);
+}
+
+/* Menambahkan warna biru pada thumb scrollbar */
+::-webkit-scrollbar-thumb {
+  background-image: linear-gradient(
+    270deg,
+    hsl(295deg 76% 51%) 0%,
+    hsl(284deg 70% 73%) 26%,
+    hsl(257deg 70% 86%) 39%,
+    hsl(202deg 92% 90%) 50%,
+    hsl(215deg 77% 81%) 61%,
+    hsl(221deg 73% 70%) 74%,
+    hsl(220deg 76% 51%) 100%
+  );
+  border-radius: 5px;
+  outline: 1px solid
+    linear-gradient(
+      270deg,
+      hsl(295deg 76% 51%) 0%,
+      hsl(284deg 70% 73%) 26%,
+      hsl(257deg 70% 86%) 39%,
+      hsl(202deg 92% 90%) 50%,
+      hsl(215deg 77% 81%) 61%,
+      hsl(221deg 73% 70%) 74%,
+      hsl(220deg 76% 51%) 100%
+    );
+}
+
 .gradient-01 {
   background-image: linear-gradient(
     270deg,
