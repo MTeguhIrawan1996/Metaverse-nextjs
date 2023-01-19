@@ -10,6 +10,11 @@
   scroll-behavior: smooth;
 }
 
+html {
+  height: 100%;
+  background-color: #1a232e;
+}
+
 /* Menyembunyikan thumb scrollbar */
 ::-webkit-scrollbar {
   width: 0.8em;
